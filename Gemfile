@@ -68,4 +68,6 @@ end
 
 gem "omniauth-twitter"
 gem "omniauth-rails_csrf_protection"
+# CVE-2026-54605 (GHSA-prq8-7wvh-44qh); transitive dep of omniauth-twitter
+gem "oauth", ">= 1.1.6"
 gem "twitter"
