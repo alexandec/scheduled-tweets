@@ -14,6 +14,11 @@ Rails.application.routes.draw do
 
   delete "log_out", to: "sessions#destroy"
 
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
+  get "password/reset/edit", to: "password_resets#edit"
+  patch "password/reset", to: "password_resets#update"
+
   root to: "main#index"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  validates :password, presence: true, on: :password_change
+
   normalizes :email, with: ->(email) { email.strip.downcase }
 
   validates :email, presence: true,
