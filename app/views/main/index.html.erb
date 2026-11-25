@@ -5,7 +5,7 @@
 <% if @user %>
     <p>Welcome, <%= @user.email %>!</p>
 <% else %>
-    <p>Please <a href="/sign_up">sign up</a></p>
+    <p>Please <a href="/sign_up">sign up</a> or <a href="/sign_in">sign in</a></p>
 <% end %>
 
-<%= button_to "Log out", log_out_path, method: :delete if @user %>
+<%= button_to "Log out", log_out_path, method: :delete, class: "btn btn-primary" if @user %>
