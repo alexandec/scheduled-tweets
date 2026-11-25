@@ -1,0 +1,15 @@
+# Ruby and ERB are formatted by RuboCop, not Prettier
+*.rb
+*.erb
+
+# Generated, vendored, or temporary files
+/vendor
+/public
+/log
+/tmp
+/storage
+/db/schema.rb
+/coverage
+/.bundle
+/node_modules
+package-lock.json
